@@ -1,0 +1,27 @@
+§# CSE API Endpoints
+
+| Endpoint | Description |
+|----------|-------------|
+| `https://www.cse.lk/api/companyInfoSummery` | Detailed info of a single stock/security by symbol |
+| `https://www.cse.lk/api/tradeSummary` | Summary of trades for all securities |
+| `https://www.cse.lk/api/todaySharePrice` | Today's share price data |
+| `https://www.cse.lk/api/topGainers` | List of top gaining stocks |
+| `https://www.cse.lk/api/topLooses` | List of top losing stocks |
+| `https://www.cse.lk/api/mostActiveTrades` | Most active trades by volume |
+| `https://www.cse.lk/api/getNewListingsRelatedNoticesAnnouncements` | New listings and related announcements |
+| `https://www.cse.lk/api/getBuyInBoardAnnouncements` | Buy-in board announcements |
+| `https://www.cse.lk/api/approvedAnnouncement` | Approved announcements |
+| `https://www.cse.lk/api/getCOVIDAnnouncements` | COVID-related announcements |
+| `https://www.cse.lk/api/getFinancialAnnouncement` | Financial announcements |
+| `https://www.cse.lk/api/circularAnnouncement` | Circular announcements |
+| `https://www.cse.lk/api/directiveAnnouncement` | Directive announcements |
+| `https://www.cse.lk/api/getNonComplianceAnnouncements` | Non-compliance announcements |
+| `https://www.cse.lk/api/marketStatus` | Market open/close status |
+| `https://www.cse.lk/api/marketSummery` | Market summary data |
+| `https://www.cse.lk/api/aspiData` | All Share Price Index data |
+| `https://www.cse.lk/api/snpData` | S&P Sri Lanka 20 Index data |
+| `https://www.cse.lk/api/chartData` | Chart data for stocks |
+| `https://www.cse.lk/api/allSectors` | All sector data |
+| `https://www.cse.lk/api/detailedTrades` | Detailed Trades |
+| `https://www.cse.lk/api/dailyMarketSummery` | Daily Market Summary |
+| `https://www.cse.lk/api/companyChartDataByStock` | Company Chart Data By Stock |
