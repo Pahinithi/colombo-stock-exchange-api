@@ -99,77 +99,48 @@ docker run -d -p 8000:8000 --env-file .env --name cse-api cse-api:latest
 docker stop cse-api
 ```
 
-## API Endpoints
+## Project Structure
 
-### Health Check
-
-- **GET** `/health` - Check API health status
-
-### Company Information
-
-- **GET** `/company-info?symbol={symbol}` - Get detailed company information
-  - **Parameters:**
-    - `symbol` (required): Company stock symbol (e.g., `JKH.N0000`)
-
-### Market Data
-
-- **GET** `/trade-summary` - Get trade summary for all companies
-- **GET** `/today-share-price` - Get today's share prices for all companies
-- **GET** `/top-gainers` - Get top gaining stocks
-- **GET** `/top-losers` - Get top losing stocks
-- **GET** `/most-active-trades` - Get most actively traded stocks
-- **GET** `/detailed-trades` - Get detailed trade information
-
-### Market Indices
-
-- **GET** `/index/aspi` - Get All Share Price Index (ASPI) data
-- **GET** `/index/snp20` - Get S&P 20 index data
-
-### Market Summary
-
-- **GET** `/market-status` - Get current market status
-- **GET** `/market-summary` - Get market summary
-- **GET** `/daily-market-summary` - Get daily market summary
-
-### Sectors
-
-- **GET** `/sectors` - Get all sectors with their performance data
-
-### Announcements
-
-- **GET** `/announcements/new-listings` - Get new listings related announcements
-- **GET** `/announcements/buy-in-board` - Get buy-in board announcements
-- **GET** `/announcements/approved` - Get approved announcements
-- **GET** `/announcements/financial` - Get financial announcements
-- **GET** `/announcements/circular` - Get circular announcements
-- **GET** `/announcements/directive` - Get directive announcements
-- **GET** `/announcements/non-compliance` - Get non-compliance announcements
-
-## Example Requests
-
-### Get Company Information
-
-```bash
-curl "http://localhost:8000/company-info?symbol=JKH.N0000"
+```
+TA_SM_API/
+├── app/
+│   ├── __init__.py
+│   ├── main.py              # FastAPI application and routes
+│   ├── settings.py          # Configuration settings
+│   └── utlits/
+│       ├── __init__.py
+│       ├── mappers.py       # Data mapping functions
+│       └── schemas.py       # Pydantic models
+├── containerfile            # Docker/Containerfile
+├── requirements.txt         # Python dependencies
+├── .env.example            # Environment variables example
+└── README.md               # This file
 ```
 
-### Get Top Gainers
+## Development
+
+### Running in Development Mode
 
 ```bash
-curl "http://localhost:8000/top-gainers"
+fastapi dev app/main.py
 ```
 
-### Get Market Summary
+This will:
+- Start the server with auto-reload
+- Enable interactive API documentation
+- Show detailed error messages
 
-```bash
-curl "http://localhost:8000/market-summary"
-```
 
-### Get ASPI Index
+## Dependencies
 
-```bash
-curl "http://localhost:8000/index/aspi"
-```
+- **FastAPI** - Modern, fast web framework for building APIs
+- **Pydantic** - Data validation using Python type annotations
+- **Pydantic Settings** - Settings management using Pydantic
+- **Requests** - HTTP library for making API calls to CSE
+
+
+
+
 
 ## Testing with Postman or Testing Tools
 
@@ -229,65 +200,15 @@ Example response structure:
 }
 ```
 
-## Error Handling
-
-The API returns standard HTTP status codes:
-
-- **200** - Success
-- **404** - Resource not found
-- **502** - CSE API not reachable or error
-
-Error response format:
-```json
-{
-  "detail": "Error message description"
-}
-```
-
-## Project Structure
-
-```
-TA_SM_API/
-├── app/
-│   ├── __init__.py
-│   ├── main.py              # FastAPI application and routes
-│   ├── settings.py          # Configuration settings
-│   └── utlits/
-│       ├── __init__.py
-│       ├── mappers.py       # Data mapping functions
-│       └── schemas.py       # Pydantic models
-├── containerfile            # Docker/Containerfile
-├── requirements.txt         # Python dependencies
-├── .env.example            # Environment variables example
-└── README.md               # This file
-```
-
-## Development
-
-### Running in Development Mode
-
-```bash
-fastapi dev app/main.py
-```
-
-This will:
-- Start the server with auto-reload
-- Enable interactive API documentation
-- Show detailed error messages
-
-
-## Dependencies
-
-- **FastAPI** - Modern, fast web framework for building APIs
-- **Pydantic** - Data validation using Python type annotations
-- **Pydantic Settings** - Settings management using Pydantic
-- **Requests** - HTTP library for making API calls to CSE
-
-
-
 
 ## Acknowledgments
 
 - Colombo Stock Exchange (CSE) for providing the underlying API
 - FastAPI community for the excellent framework
 
+
+## Contact
+
+For any questions or support, please contact:
+- Developer: Nithilan Pahirathan
+- Email: nithilan32@gmail.com
