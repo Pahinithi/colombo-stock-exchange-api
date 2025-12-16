@@ -25,7 +25,7 @@ A FastAPI-based REST API wrapper for the Colombo Stock Exchange (CSE) API, provi
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/Pahinithi/colombo-stock-exchange-api.git
 cd TA_SM_API
 ```
 
