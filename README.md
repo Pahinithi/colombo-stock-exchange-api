@@ -2,6 +2,9 @@
 
 A FastAPI-based REST API wrapper for the Colombo Stock Exchange (CSE) API, providing structured access to real-time market data, company information, trade summaries, announcements, and market indices.
 
+**Unofficial API usage guide**  
+Explore stock market data from the Colombo Stock Exchange (CSE) via their public API endpoints — reverse-engineered since no official documentation exists. 🔍
+
 **Version:** CSE=V1.0
 
 ## Features
@@ -212,3 +215,4 @@ Example response structure:
 For any questions or support, please contact:
 - Developer: Nithilan Pahirathan
 - Email: nithilan32@gmail.com
+
